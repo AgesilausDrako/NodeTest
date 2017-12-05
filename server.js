@@ -2,7 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
-const htmlRoutes = require("./routes/htmlRoutes");
+const exphbs = require("express-handlebars");
 const apiRoutes = require("./routes/apiRoutes");
 
 const app = express();
@@ -18,12 +18,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("public"));
 
-const exphbs = require("express-handlebars");
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// app.use("/", htmlRoutes);
 app.use("/", apiRoutes);
 
 app.listen(PORT, () => {

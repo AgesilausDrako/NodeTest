@@ -1,14 +1,14 @@
-<div class="main-item">
-
-    
-
-  </div><!-- End of main-item -->
-  <div class="sub-items">
-    {{#each results}}
-      {{#if this.description}}
-        <h1>{{this.description}}</h1>
-      {{/if}}
-    {{/each}}
-        
-    
-  </div><!-- End of main-item -->
+<div id="main-display">
+  {{#if results}}
+      <img src="{{results.0.imageUrls.md}}">
+      <p>{{results.0.description}}</p>
+  {{/if}}
+</div><!-- End of main-item -->
+<div id="item-display">
+  {{#each results}}
+      <div class="sub-item">
+        <img src="{{this.imageUrls.md}}">
+        <p>{{this.description}}</p>
+      </div>
+  {{/each}}
+</div><!-- End of main-item -->
