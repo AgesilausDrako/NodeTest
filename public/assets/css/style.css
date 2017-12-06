@@ -1,3 +1,35 @@
-h1 {
-    font-size: 5em;
+#main-display {
+    margin-top: 1em;
+    border: .25em gray;
+}
+
+.bullet-list {
+    display:list-item
+}
+
+#item-display {
+
+}
+
+#sub-display {
+    display: inline-block;
+}
+
+.main-title {
+    font-face: Helvetica-Bold;
+    font-size: 16px;
+}
+
+.sub-item {
+    border: .25em solid black;
+}
+.sub-title {
+    font-size: .875em;
+}
+
+.btn-more {
+    text color: #0471AF;
+    font-size: .875em;
+    background-color: #FFFFFF;
+    border: 1px, #CCCCCC;
 }
