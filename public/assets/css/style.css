@@ -15,8 +15,6 @@ body {
 .main-image {
     margin-top: 2em;
     margin-bottom: 2em;
-    /* height: 12.188em;
-    width: 12.188em; */
 }
 
 
@@ -94,7 +92,7 @@ body {
 
 @media screen and (min-width: 1400px) {
     .sub-item {
-        width: 23.5%;
+        width: 23.8%;
     }
 
     .sub-item:nth-child(4) {
