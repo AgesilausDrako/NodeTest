@@ -3,20 +3,20 @@
     <div id="main-display" class="col-xs-12 text-center">
       {{#if results}}
           <div class="col-md-3">
-            <img class="main-image text-center" src="{{results.0.imageUrls.lg}}">
+            <img class="main-image text-center" data-image-role="target" src="{{results.0.imageUrls.lg}}">
           </div>
           <div class="col-md-6 text-left">
-            <h1 class="main-title">{{results.0.description}}</h1>
-          <ul id="list">
+            <h1 class="main-title" data-title-role="title">{{results.0.description}}</h1>
+          <ul id="list" data-bullets-role="bullets">
             {{#each results.0.marketingBullets as |item|}}
               <li>
-                -  {{item}}
+                {{item}}
               </li>
             {{/each}}
           </ul>
           </div>
           <div class="col-md-3">
-            <h1 class="main-price">${{results.0.pricing.price.selling}}</h1>
+            <h1 class="main-price" data-price-role="price">${{results.0.pricing.price.selling}}</h1>
             <button class="cart-btn">ADD TO CART</button>
           </div>
       {{/if}}
@@ -25,7 +25,7 @@
   <div class="row">
     <div id="item-display col-md-12">
       {{#each results}}
-          <div class="sub-item col-md-3 text-center">
+          <div class="sub-item col-md-3 text-center" data-image-role="trigger" data-title-role="{{this.description}}" data-image-url="{{this.imageUrls.lg}}" data-bullets-role="{{this.marketingBullets}}" data-price-role="${{this.pricing.price.selling}}">
             <div class="text-center">
               <img class="sub-image text-center" src="{{this.imageUrls.md}}">
             </div>
