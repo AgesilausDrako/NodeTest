@@ -1,36 +1,39 @@
 <div class="container-fluid">
   <div class="row">
-    <div id="main-display" class="col-xs-12">
+    <div id="main-display" class="col-xs-12 text-center">
       {{#if results}}
           <div class="col-md-3">
-            <img src="{{results.0.imageUrls.lg}}">
+            <img class="main-image text-center" src="{{results.0.imageUrls.lg}}">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 text-left">
             <h1 class="main-title">{{results.0.description}}</h1>
-          <ul class="bullet-list">
+          <ul id="list">
             {{#each results.0.marketingBullets as |item|}}
               <li>
-                {{item}}
+                -  {{item}}
               </li>
             {{/each}}
           </ul>
           </div>
           <div class="col-md-3">
-            <h1>Price: {{results.0.pricing.price.selling}}</h1>
-            <button>ADD TO CART</button>
+            <h1 class="main-price">${{results.0.pricing.price.selling}}</h1>
+            <button class="cart-btn">ADD TO CART</button>
           </div>
       {{/if}}
     </div><!-- End of main-item col -->
   </div><!-- End of main-item row -->
   <div class="row">
-    <div id="item-display col-xs-12">
+    <div id="item-display col-md-12">
       {{#each results}}
           <div class="sub-item col-md-3 text-center">
-            <img src="{{this.imageUrls.md}}">
-            <h1 class="sub-title">{{this.description}}</h1>
+            <div class="text-center">
+              <img class="sub-image text-center" src="{{this.imageUrls.md}}">
+            </div>
+            <h1 class="sub-title text-left">{{this.description}}</h1>
+            <h1 class="sub-price text-left">${{this.pricing.price.selling}}</h1>
             <button class="btn-more">VIEW MORE</button>
           </div>
       {{/each}}
-    </div><!-- End of sub-item -->
-  </div>
-</div>
+    </div><!-- End of sub-item column -->
+  </div><!-- End of sub-item row -->
+</div><!-- End of container -->
