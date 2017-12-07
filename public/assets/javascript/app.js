@@ -4,6 +4,13 @@ const DETAIL_BULLETS_SELECTOR = "[data-bullets-role='bullets']";
 const DETAIL_PRICE_SELECTOR = "[data-price-role='price']";
 const ITEM_LINK_SELECTOR = "[data-image-role='trigger']";
 
+document.getElementById("cart-btn").addEventListener("click", () => {
+    const element = document.getElementById("main-price");
+    const text = element.innerText || element.textContent;
+    element.innerHTML = text;
+    alert(`This washer costs: ${text}.`);
+  });
+
 const setDetails = (imageUrl, titleText, bullets, price) => {
     'use strict';
     const detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);

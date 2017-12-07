@@ -18,7 +18,7 @@ body {
 }
 
 
-.main-price {
+#main-price {
     font-family: "Helvetica-Bold";
     color: #333333;
     font-size: 1.375em;
@@ -30,7 +30,7 @@ body {
     font-size: 1em;
 }
 
-.cart-btn {
+#cart-btn {
     margin-bottom: 1.25em;
     color: #FFFFFF;
     background-color: #338700;
